@@ -1,0 +1,3 @@
+To build a cmake project into build folder
+
+ cmake -S .. -G "Visual Studio 17 2022" -A x64 -B .
