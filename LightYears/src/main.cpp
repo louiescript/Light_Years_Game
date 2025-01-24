@@ -1,8 +1,12 @@
 #include <iostream>
+#include <memory>
 #include <print>
 #include <string>
+
 #include <SFML/Graphics.hpp>
 #include <SFML/Window/VideoMode.hpp>
+#include "framework/App.h"
+
 //#include <SFML/Audio.hpp>
 //#include <SFML/System.hpp>
 //#include <SFML/Window.hpp>
@@ -11,29 +15,11 @@
 
 int main()
 {
-	
-	sf::VideoMode mode(sf::Vector2u(100,100));
-	sf::RenderWindow renderWindow{mode,"MyWindow"}; //constructs window
+	//allocating the heap. entire application to heap
+	//ly::App* app = new ly::App();
+	//app->Run();
 
-
-
-	while (renderWindow.isOpen()) 
-	{
-		while (const std::optional event = renderWindow.pollEvent()) 
-		{
-			if (event->is<sf::Event::Closed>())
-			{
-				renderWindow.close();
-			}
-
-		}
-	}
-
-	std::string new_name{ "timothy" };
-
-	std::println("{}", new_name);
-
-	std::print("15.5"); 
-
-
+	//allocating using unique ptr
+	std::unique_ptr<ly::App> app{ std::make_unique<ly::App>() };
+	app->Run();
 }
