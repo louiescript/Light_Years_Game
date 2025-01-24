@@ -9,8 +9,6 @@ set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
-#creates a variable to reference later on
-set (LIGHT_YEARS_GAME_TARGET_NAME LightYearsGame)
 
 
 set(SFML_LIB_NAME SFML)
@@ -27,13 +25,10 @@ FetchContent_Declare(
 
 FetchContent_MakeAvailable(${SFML_LIB_NAME})
 
+#creates a variable to reference later on
+set (LIGHT_YEARS_GAME_TARGET_NAME LightYearsGame)
+
 #this is like an include operation, for better code management
 add_subdirectory(LightYears)
 
-target_compile_features(${LIGHT_YEARS_GAME_TARGET_NAME} PRIVATE cxx_std_23)
-target_link_libraries(${LIGHT_YEARS_GAME_TARGET_NAME} PUBLIC SFML::Graphics)
-target_link_libraries(${LIGHT_YEARS_GAME_TARGET_NAME} PUBLIC SFML::Window)
-target_link_libraries(${LIGHT_YEARS_GAME_TARGET_NAME} PUBLIC SFML::System)
-target_link_libraries(${LIGHT_YEARS_GAME_TARGET_NAME} PUBLIC SFML::Audio)
 
-#might want to try out SFML::NETWORK in personal project

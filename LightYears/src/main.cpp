@@ -13,13 +13,27 @@ int main()
 {
 	
 	sf::VideoMode mode(sf::Vector2u(100,100));
-	sf::RenderWindow renderWindow{mode,"MyWindow"};
+	sf::RenderWindow renderWindow{mode,"MyWindow"}; //constructs window
+
+
+
+	while (renderWindow.isOpen()) 
+	{
+		while (const std::optional event = renderWindow.pollEvent()) 
+		{
+			if (event->is<sf::Event::Closed>())
+			{
+				renderWindow.close();
+			}
+
+		}
+	}
 
 	std::string new_name{ "timothy" };
 
 	std::println("{}", new_name);
 
-	std::print("15.5");
+	std::print("15.5"); 
 
 
 }

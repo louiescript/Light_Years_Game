@@ -1,0 +1,17 @@
+{
+  "OutputFoldersPerTargetSystem": {
+    "Local Machine": [
+      "out\\build\\x64-Debug",
+      "out\\install\\x64-Debug"
+    ]
+  },
+  "ExpandedNodes": [
+    "",
+    "\\LightYears",
+    "\\LightYears\\include",
+    "\\LightYears\\src",
+    "\\LightYears\\src\\framework"
+  ],
+  "SelectedNode": "\\LightYears\\src\\framework\\app.cpp",
+  "PreviewInSolutionExplorer": false
+}
