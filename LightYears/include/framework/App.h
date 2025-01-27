@@ -13,8 +13,15 @@ namespace ly
 
 
 	private:
+		void Tick(float delta_time);
+		void Render();
+
+
+
 		sf::VideoMode m_mode;
 		sf::RenderWindow m_window; //member varible window
+		float m_target_frame_rate;
+		sf::Clock m_tick_clock; //keeps a record of the timing
 	};
 
 }
