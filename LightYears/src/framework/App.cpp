@@ -27,29 +27,56 @@ namespace ly
 
 			}
 			//calculates ammount of time elapsed
+			float frame_delta_time{ m_tick_clock.restart().asSeconds() };
+			accumulated_time += frame_delta_time;
 
-			accumulated_time += m_tick_clock.restart().asSeconds();
-
-			//tagreting a specific delta time
+			//targeting a specific delta time, once the framerate hits 60, it updaes
 			while (accumulated_time > target_delta_time)
 			{
 				//start updating
 				accumulated_time -= target_delta_time;
-				Tick(target_delta_time);
-				Render();
+				TickInternal(target_delta_time);
+				RenderInternal();
 			}
+			std::println("ticking at framerate: {:.1f}", (1.f / frame_delta_time));
 		}
+	}
+
+	void App::TickInternal(float delta_time)
+	{
+		Tick(delta_time);
+	}
+
+	void App::RenderInternal()
+	{
+		m_window.clear(); //step 1 clears window
+
+		Render();
+		
+		//step 3 clear window
+		m_window.display(); //displays change
+	}
+    //alt-enter to generat render
+	void App::Render()
+	{
+
+		//step 2. rendering stuff
+		//sf::RectangleShape entity{ sf::Vector2f{100,100} };
+		sf::CircleShape entity{ {100} };
+		entity.setFillColor(sf::Color::Green);
+		entity.setOrigin({ 50, 50 });//center of entity
+		entity.setPosition({ m_window.getSize().x / 2.f ,m_window.getSize().y / 2.f }); //mooves to center of window
+		m_window.draw(entity);
+
+
 	}
 
 	void App::Tick(float delta_time)
 	{
-		std::println("ticking at framerate: {:.1f}",(1.f / delta_time));
-	}
-
-	void App::Render()
-	{
 
 	}
+
+
 
 
 }

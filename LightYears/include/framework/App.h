@@ -13,9 +13,10 @@ namespace ly
 
 
 	private:
-		void Tick(float delta_time);
-		void Render();
-
+		void TickInternal(float delta_time);
+		void RenderInternal();
+		virtual void Render();
+		virtual void Tick(float delta_time);
 
 
 		sf::VideoMode m_mode;
