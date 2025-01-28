@@ -9,9 +9,8 @@
     "",
     "\\LightYears",
     "\\LightYears\\include",
-    "\\LightYears\\src",
-    "\\LightYears\\src\\framework"
+    "\\LightYears\\src"
   ],
-  "SelectedNode": "\\LightYears\\src\\framework\\app.cpp",
+  "SelectedNode": "\\LightYears\\CMakeLists.txt",
   "PreviewInSolutionExplorer": false
 }
