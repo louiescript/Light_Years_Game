@@ -26,9 +26,10 @@ FetchContent_Declare(
 FetchContent_MakeAvailable(${SFML_LIB_NAME})
 
 #creates a variable to reference later on
+set (LIGHT_YEARS_ENGINE_TARGET_NAME LightYearsEngine)
 set (LIGHT_YEARS_GAME_TARGET_NAME LightYearsGame)
 
 #this is like an include operation, for better code management
-add_subdirectory(LightYears)
-
+add_subdirectory(LightYearsEngine)
+add_subdirectory(LightYearsGame)
 

@@ -7,10 +7,13 @@
   },
   "ExpandedNodes": [
     "",
-    "\\LightYears",
-    "\\LightYears\\include",
-    "\\LightYears\\src"
+    "\\LightYearsEngine",
+    "\\LightYearsGame",
+    "\\LightYearsGame\\include",
+    "\\LightYearsGame\\include\\gameFramework",
+    "\\LightYearsGame\\src",
+    "\\LightYearsGame\\src\\gameFramework"
   ],
-  "SelectedNode": "\\LightYears\\CMakeLists.txt",
+  "SelectedNode": "\\CMakeLists.txt",
   "PreviewInSolutionExplorer": false
 }
