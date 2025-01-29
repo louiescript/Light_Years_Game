@@ -1,6 +1,8 @@
 #include "framework/App.h"
+#include "framework/Core.h"
 #include <print>
 #include <cmath>
+//#include <stdio.h>
 
 namespace ly
 {
@@ -38,7 +40,8 @@ namespace ly
 				TickInternal(target_delta_time);
 				RenderInternal();
 			}
-			std::println("ticking at framerate: {:.1f}", (1.f / frame_delta_time));
+			LOG("ticking at framerate: {:.1f}", (1.f / frame_delta_time));
+			//printf("ticking at framerate: %f\n", (1.f / frame_delta_time));
 		}
 	}
 
