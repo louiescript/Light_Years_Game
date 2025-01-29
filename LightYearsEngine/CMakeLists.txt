@@ -6,6 +6,9 @@ add_library(${LIGHT_YEARS_ENGINE_TARGET_NAME} STATIC
 	${CMAKE_CURRENT_SOURCE_DIR}/include/framework/Core.h
 	${CMAKE_CURRENT_SOURCE_DIR}/src/framework/Core.cpp
 
+	${CMAKE_CURRENT_SOURCE_DIR}/include/framework/World.h
+	${CMAKE_CURRENT_SOURCE_DIR}/src/framework/World.cpp
+
 	${CMAKE_CURRENT_SOURCE_DIR}/include/Entrypoint.h
 	${CMAKE_CURRENT_SOURCE_DIR}/src/Entrypoint.cpp
 )

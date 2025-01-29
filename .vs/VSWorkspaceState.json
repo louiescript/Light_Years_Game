@@ -11,11 +11,7 @@
     "\\LightYearsEngine\\include",
     "\\LightYearsEngine\\include\\framework",
     "\\LightYearsEngine\\src",
-    "\\LightYearsEngine\\src\\framework",
-    "\\LightYearsGame\\include",
-    "\\LightYearsGame\\include\\gameFramework",
-    "\\LightYearsGame\\src",
-    "\\LightYearsGame\\src\\gameFramework"
+    "\\LightYearsEngine\\src\\framework"
   ],
   "SelectedNode": "\\LightYearsEngine\\CMakeLists.txt",
   "PreviewInSolutionExplorer": false
