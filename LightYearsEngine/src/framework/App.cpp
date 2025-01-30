@@ -40,7 +40,7 @@ namespace ly
 				TickInternal(target_delta_time);
 				RenderInternal();
 			}
-			LOG("ticking at framerate: {:.1f}", (1.f / frame_delta_time));
+			//LOG("ticking at framerate: {:.1f}", (1.f / frame_delta_time));
 			//printf("ticking at framerate: %f\n", (1.f / frame_delta_time));
 		}
 	}
