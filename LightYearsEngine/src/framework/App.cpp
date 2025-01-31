@@ -1,5 +1,6 @@
 #include "framework/App.h"
 #include "framework/Core.h"
+#include "framework/World.h"
 #include <print>
 #include <cmath>
 //#include <stdio.h>
@@ -7,7 +8,7 @@
 namespace ly
 {
 	App::App()
-		:m_mode{ sf::Vector2u(1024,1240) }, m_window{ m_mode,"Light Years" }, m_target_frame_rate{ 60.0f }, m_tick_clock{}
+		:m_mode{ sf::Vector2u(1024,1240) }, m_window{ m_mode,"Light Years" }, m_target_frame_rate{ 60.0f }, m_tick_clock{}, current_world{nullptr}
 	{
 
 	}
@@ -48,6 +49,12 @@ namespace ly
 	void App::TickInternal(float delta_time)
 	{
 		Tick(delta_time);
+
+		if (current_world)
+		{
+			current_world->BeginPlayInternal();
+			current_world->TickInternal();
+		}
 	}
 
 	void App::RenderInternal()

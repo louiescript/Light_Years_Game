@@ -14,7 +14,7 @@ namespace ly
 		void Run();
 
 		template<typename WorldType>
-		weak<WorldType> LoadWorld();
+		weak<WorldType> LoadWorld();//weak because should not have ownership
 
 	private:
 		void TickInternal(float delta_time);
@@ -34,7 +34,9 @@ namespace ly
 	template<typename WorldType>
 	weak<WorldType> App::LoadWorld()
 	{
-		shared<WorldType> new_world{new WorldType{this}}
+		shared<WorldType> new_world{ new WorldType{this} }; //we are using new bcz makeshare limits it to std library
+		current_world = new_world;
+		return new_world;
 	}
 
 
