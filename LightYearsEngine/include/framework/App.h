@@ -36,6 +36,7 @@ namespace ly
 	{
 		shared<WorldType> new_world{ new WorldType{this} }; //we are using new bcz makeshare limits it to std library
 		current_world = new_world;
+		current_world->BeginPlayInternal();
 		return new_world;
 	}
 

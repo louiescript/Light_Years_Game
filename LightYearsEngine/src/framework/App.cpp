@@ -8,7 +8,10 @@
 namespace ly
 {
 	App::App()
-		:m_mode{ sf::Vector2u(1024,1240) }, m_window{ m_mode,"Light Years" }, m_target_frame_rate{ 60.0f }, m_tick_clock{}, current_world{nullptr}
+		:m_mode{ sf::Vector2u(1024,1240) }, 
+		m_window{ m_mode,"Light Years" }, 
+		m_target_frame_rate{ 60.0f }, 
+		m_tick_clock{}, current_world{nullptr}
 	{
 
 	}
@@ -52,7 +55,6 @@ namespace ly
 
 		if (current_world)
 		{
-			current_world->BeginPlayInternal();
 			current_world->TickInternal(delta_time);
 		}
 	}
