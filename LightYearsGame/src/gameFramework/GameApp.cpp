@@ -7,5 +7,8 @@ ly::App* GetApp()
 
 namespace ly
 {
-
+	GameApp::GameApp()
+	{
+		LoadWorld<World>();
+	}
 }

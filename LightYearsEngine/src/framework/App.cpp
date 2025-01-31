@@ -53,7 +53,7 @@ namespace ly
 		if (current_world)
 		{
 			current_world->BeginPlayInternal();
-			current_world->TickInternal();
+			current_world->TickInternal(delta_time);
 		}
 	}
 
