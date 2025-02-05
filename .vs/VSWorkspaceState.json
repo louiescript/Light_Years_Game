@@ -6,13 +6,7 @@
     ]
   },
   "ExpandedNodes": [
-    "",
-    "\\LightYearsEngine",
-    "\\LightYearsEngine\\include",
-    "\\LightYearsEngine\\include\\framework",
-    "\\LightYearsEngine\\src",
-    "\\LightYearsEngine\\src\\framework"
+    ""
   ],
-  "SelectedNode": "\\LightYearsEngine\\CMakeLists.txt",
   "PreviewInSolutionExplorer": false
 }
