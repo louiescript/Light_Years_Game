@@ -2,6 +2,7 @@
 #include <SFML/Graphics.hpp>
 #include <SFML/Window/VideoMode.hpp>
 #include "framework/Core.h"
+#include "framework/World.h"
 
 //says that everything created belongs to ly namespace, prevents name clashing
 namespace ly
